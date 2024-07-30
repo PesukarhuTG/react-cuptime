@@ -1,0 +1,136 @@
+/* inter-regular - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/inter-v13-cyrillic_latin-regular.woff2')
+    format('woff2');
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 1.24;
+  color: #1d1c1d;
+  background-color: #fff;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* HEADER */
+.header {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  padding: 0 24px;
+  width: 100%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1392px;
+  padding: 12px 46px;
+  backdrop-filter: blur(60px);
+  background: rgba(108, 185, 171, 0.7);
+}
+
+.header__logo-link {
+  font-size: 0;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-weight: 400;
+}
+
+.header__cart-link {
+  width: 28px;
+  height: 28px;
+  padding: 10px 4px 3px;
+  font-size: 12px;
+  text-align: center;
+  color: #64099b;
+  background-image: url('../assets/img/icon-bag.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* PROMO */
+.promo {
+  background-color: #6cb9ab;
+  color: #fff;
+}
+
+.promo__container {
+  padding-top: 210px;
+  padding-bottom: 80px;
+  background-image: url('../assets/img/bg-img-promo.png');
+  background-position: right 113px bottom 0;
+  background-repeat: no-repeat;
+}
+
+.promo__title {
+  max-width: 800px;
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 88px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.promo__link {
+  display: inline-block;
+  padding: 16px 24px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
