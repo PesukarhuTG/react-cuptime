@@ -80,7 +80,7 @@
   .promo__container {
     padding-top: 90px;
     padding-bottom: 250px;
-    background-image: url('img/bg-img-promo_1024.png');
+    background-image: url('/img/bg-img-promo_1024.png');
     background-size: 145px;
     background-position: center bottom;
     background-repeat: no-repeat;
