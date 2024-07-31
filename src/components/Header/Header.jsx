@@ -4,7 +4,7 @@ import cn from 'classnames';
 const Header = () => {
   return (
     <header className={style.header}>
-      <div className={cn('container', style.header__container)}>
+      <div className={cn(style.container, style.header__container)}>
         <a className={style.header__logoLink} href="/">
           <img
             className={style.header__logo}

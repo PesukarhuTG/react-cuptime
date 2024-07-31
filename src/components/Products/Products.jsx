@@ -43,7 +43,7 @@ const productList = [
 const Products = () => {
   return (
     <section className={style.goods}>
-      <div className="container">
+      <div className={style.container}>
         <h2 className={style.goods__title}>Чай</h2>
         <ul className={style.goods__list}>
           {productList.map((item) => (

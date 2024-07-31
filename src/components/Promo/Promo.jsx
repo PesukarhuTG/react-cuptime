@@ -2,7 +2,7 @@ import style from './Promo.module.css';
 
 const Promo = () => (
   <section className={style.promo}>
-    <div className="container">
+    <div className={style.container}>
       <div className={style.promo__container}>
         <h1 className={style.promo__title}>Попробуй новый вкус Арабики</h1>
         <a className={style.promo__link} href="#">

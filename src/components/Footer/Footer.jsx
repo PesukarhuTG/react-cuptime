@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 const Footer = () => (
   <footer className={style.footer}>
-    <div className={cn('container', style.footer__container)}>
+    <div className={cn(style.container, style.footer__container)}>
       <a className={style.footer__logoLink}>
         <img
           className={style.footer__logo}
@@ -11,36 +11,33 @@ const Footer = () => (
           alt="Логотип Cup time"
         />
       </a>
-      <div className={style.footer__nav}>
-        <ul className={style.footer__menu}>
-          <li className={style.footer__menuItem}>
-            <a className={style.footer__menuLink} href="#">
-              Чай
-            </a>
-          </li>
-          <li className={style.footer__menuItem}>
-            <a className={style.footer__menuLink} href="#">
-              Кофе
-            </a>
-          </li>
-          <li className={style.footer__menuItem}>
-            <a className={style.footer__menuLink} href="#">
-              Чайники
-            </a>
-          </li>
-          <li className={style.footer__menuItem}>
-            <a className={style.footer__menuLink} href="#">
-              Турки
-            </a>
-          </li>
-          <li className={style.footer__menuItem}>
-            <a className={style.footer__menuLink} href="#">
-              Прочее
-            </a>
-          </li>
-        </ul>
-      </div>
-
+      <ul className={style.footer__menu}>
+        <li className={style.footer__menuItem}>
+          <a className={style.footer__menuLink} href="#">
+            Чай
+          </a>
+        </li>
+        <li className={style.footer__menuItem}>
+          <a className={style.footer__menuLink} href="#">
+            Кофе
+          </a>
+        </li>
+        <li className={style.footer__menuItem}>
+          <a className={style.footer__menuLink} href="#">
+            Чайники
+          </a>
+        </li>
+        <li className={style.footer__menuItem}>
+          <a className={style.footer__menuLink} href="#">
+            Турки
+          </a>
+        </li>
+        <li className={style.footer__menuItem}>
+          <a className={style.footer__menuLink} href="#">
+            Прочее
+          </a>
+        </li>
+      </ul>
       <div className={style.footer__info}>
         <p className={style.footer__copyright}>&copy;CUPTIME, 2024</p>
         <div className={style.footer__description}>

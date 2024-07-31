@@ -1,9 +1,10 @@
 .good {
   display: flex;
   flex-direction: column;
+  min-height: 600px;
+  height: 100%;
   font-size: 0;
   background: #f2f9f7;
-  min-height: 600px;
   color: #1d1c1d;
 }
 
@@ -13,7 +14,7 @@
 
 .good__content {
   flex-grow: 1;
-  padding: 40px 24px 25px;
+  padding: 40px 24px 24px;
   display: flex;
   flex-direction: column;
 }
@@ -35,4 +36,44 @@
 .good__price {
   margin: 0;
   font-size: 20px;
+}
+
+@media (max-width: 1240px) {
+  .good {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 940px) {
+  .good {
+    min-height: 360px;
+  }
+
+  .good__title {
+    max-height: 52px;
+    font-size: 20px;
+  }
+
+  .good__price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 660px) {
+  .good__image {
+    max-height: 226px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .good__content {
+    padding: 16px 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .good__title {
+    max-height: 40px;
+    font-size: 16px;
+  }
 }
