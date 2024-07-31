@@ -14,7 +14,7 @@
 .promo__container {
   padding-top: 210px;
   padding-bottom: 80px;
-  background-image: url('img/bg-img-promo.png');
+  background-image: url('/img/bg-img-promo.png');
   background-position: right 113px bottom 0;
   background-repeat: no-repeat;
 }
@@ -43,7 +43,7 @@
   .promo__container {
     padding-top: 172px;
     padding-bottom: 60px;
-    background-image: url('img/bg-img-promo_1024.png');
+    background-image: url('/img/bg-img-promo_1024.png');
     background-position: right 48px bottom 0;
   }
 
