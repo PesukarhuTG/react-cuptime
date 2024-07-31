@@ -38,6 +38,11 @@
   font-weight: 400;
 }
 
+.header__iconWrapper {
+  display: flex;
+  gap: 16px;
+}
+
 .header__cartLink {
   width: 28px;
   height: 28px;
@@ -48,6 +53,12 @@
   background-image: url('img/icon-bag.svg');
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.header__burger {
+  display: none;
+  background-color: transparent;
+  border: 0;
 }
 
 @media (max-width: 1240px) {
@@ -92,5 +103,9 @@
 
   .header__menu {
     display: none;
+  }
+
+  .header__burger {
+    display: block;
   }
 }
