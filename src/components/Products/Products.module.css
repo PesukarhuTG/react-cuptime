@@ -1,0 +1,18 @@
+/* GOODS */
+.goods {
+  padding: 100px 0;
+}
+
+.goods__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 54px;
+  line-height: 1.1;
+  color: #64099b;
+}
+
+.goods__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}

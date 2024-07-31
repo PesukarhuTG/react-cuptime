@@ -1,0 +1,38 @@
+.good {
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+  background: #f2f9f7;
+  min-height: 600px;
+  color: #1d1c1d;
+}
+
+.good__image {
+  width: 100%;
+}
+
+.good__content {
+  flex-grow: 1;
+  padding: 40px 24px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.good__title {
+  flex-grow: 1;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.good__price {
+  margin: 0;
+  font-size: 20px;
+}

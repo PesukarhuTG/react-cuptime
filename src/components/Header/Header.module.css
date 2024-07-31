@@ -1,0 +1,43 @@
+/* HEADER */
+.header {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  padding: 0 24px;
+  width: 100%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1392px;
+  padding: 12px 46px;
+  backdrop-filter: blur(60px);
+  background: rgba(108, 185, 171, 0.7);
+}
+
+.header__logoLink {
+  font-size: 0;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-weight: 400;
+}
+
+.header__cartLink {
+  width: 28px;
+  height: 28px;
+  padding: 10px 4px 3px;
+  font-size: 12px;
+  text-align: center;
+  color: #64099b;
+  background-image: url('img/icon-bag.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
