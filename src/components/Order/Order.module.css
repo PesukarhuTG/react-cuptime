@@ -1,14 +1,16 @@
 .order {
   padding: 50px 0 100px;
 }
+
 .container {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 0 50px;
 }
+
 .order__title {
-  margin-bottom: 32px;
+  margin: 0 0 32px;
   font-weight: 400;
   font-size: 54px;
   line-height: 1.1;
@@ -73,10 +75,44 @@
 }
 
 @media (max-width: 940px) {
+  .order {
+    padding: 30px 0 80px;
+  }
+
+  .order__title {
+    margin-bottom: 24px;
+    font-size: 36px;
+  }
+
+  .order__form {
+    max-width: none;
+    gap: 16px;
+  }
+
+  .order__input {
+    padding: 13px 16px;
+  }
+
+  .order__payment {
+    padding: 8px 0 0;
+  }
 }
 
 @media (max-width: 660px) {
+  .order {
+    padding: 30px 0 60px;
+  }
+
   .container {
     padding: 0 16px;
+  }
+
+  .order__form {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .order__payment {
+    padding: 16px 0 0;
   }
 }
