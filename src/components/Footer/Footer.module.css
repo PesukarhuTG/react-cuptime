@@ -100,32 +100,18 @@
     padding: 0 16px;
   }
 
-  .footer__logoLink {
-    grid-area: logo;
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .footer__menu {
-    grid-area: menu;
     flex-direction: column;
     gap: 16px;
     font-size: 16px;
   }
 
   .footer__info {
-    grid-area: info;
-  }
-
-  .footer__contacts {
-    grid-area: contacts;
-  }
-
-  .footer__container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    grid-template-areas:
-      'logo'
-      'menu'
-      'contacts'
-      'info';
+    order: 1;
   }
 }

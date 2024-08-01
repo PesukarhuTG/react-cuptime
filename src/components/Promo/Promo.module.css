@@ -78,15 +78,15 @@
   }
 
   .promo__container {
+    min-height: auto;
     padding-top: 90px;
     padding-bottom: 250px;
-    background-image: url('/img/bg-img-promo_1024.png');
     background-size: 145px;
     background-position: center bottom;
-    background-repeat: no-repeat;
   }
 
   .promo__title {
+    max-width: 350px;
     margin-bottom: 24px;
     font-size: 40px;
   }
