@@ -12,9 +12,11 @@ Using technologies:
 - HTML & CSS from scratch
 - Vite
 - React (functional components)
+- [React Router Dom](https://reactrouter.com/en/main/router-components/router)
 - destructurization, ES6+ syntax
 - extra libraries:
   - [classnames](https://www.npmjs.com/package/classnames)
 
 What was implemented:
 - interface is based on [Figma layout](https://www.figma.com/design/ucBi13ob656BjD6IkZZxD5/CUP-TIME-Online-store?m=auto&t=n63ki03lVIprn9WY-6)
+- Routing
