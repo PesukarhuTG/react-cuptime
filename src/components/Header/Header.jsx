@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import style from './Header.module.css';
 import cn from 'classnames';
 
@@ -5,13 +6,13 @@ const Header = () => {
   return (
     <header className={style.header}>
       <div className={cn(style.container, style.header__container)}>
-        <a className={style.header__logoLink} href="/">
+        <Link className={style.header__logoLink} to="/">
           <img
             className={style.header__logo}
             src="/img/logo.svg"
             alt="Логотип Cup time"
           />
-        </a>
+        </Link>
 
         <nav className={style.header__nav}>
           <ul className={style.header__menu}>
@@ -44,9 +45,9 @@ const Header = () => {
         </nav>
 
         <div className={style.header__iconWrapper}>
-          <a className={style.header__cartLink} href="cart.html">
+          <Link className={style.header__cartLink} to="/cart">
             6
-          </a>
+          </Link>
 
           <button className={style.header__burger}>
             <svg
