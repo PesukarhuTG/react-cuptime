@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Promo, Products } from '../';
+import { Promo, Products, Order, Cart } from '../';
 
 const Main = () => {
   return (
@@ -18,7 +18,8 @@ const Main = () => {
           path="/cart"
           element={
             <>
-              <p>Корзина</p>
+              <Cart />
+              <Order />
             </>
           }
         />
