@@ -17,29 +17,44 @@ const Header = () => {
         <nav className={style.header__nav}>
           <ul className={style.header__menu}>
             <li className={style.header__menuItem}>
-              <a className={style.header__menuLink} href="#">
+              <Link
+                className={style.header__menuLink}
+                to="/products?category=tea"
+              >
                 Чай
-              </a>
+              </Link>
             </li>
             <li className={style.header__menuItem}>
-              <a className={style.header__menuLink} href="#">
+              <Link
+                className={style.header__menuLink}
+                to="/products?category=coffee"
+              >
                 Кофе
-              </a>
+              </Link>
             </li>
             <li className={style.header__menuItem}>
-              <a className={style.header__menuLink} href="#">
+              <Link
+                className={style.header__menuLink}
+                to="/products?category=teapots"
+              >
                 Чайники
-              </a>
+              </Link>
             </li>
             <li className={style.header__menuItem}>
-              <a className={style.header__menuLink} href="#">
+              <Link
+                className={style.header__menuLink}
+                to="/products?category=cezves"
+              >
                 Турки
-              </a>
+              </Link>
             </li>
             <li className={style.header__menuItem}>
-              <a className={style.header__menuLink} href="#">
+              <Link
+                className={style.header__menuLink}
+                to="/products?category=other"
+              >
                 Прочее
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

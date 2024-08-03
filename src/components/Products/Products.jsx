@@ -2,10 +2,12 @@ import style from './Products.module.css';
 import ProductItem from '../ProductItem/ProductItem';
 import { useEffect } from 'react';
 import { useProducts } from '../../context/ProductContext.jsx';
+import { useSearchParams } from 'react-router-dom';
 
 const Products = () => {
+  const [searchParams] = useSearchParams();
   const { products, setCategory } = useProducts();
-  const category = 'tea';
+  const category = searchParams.get('category');
   let content = null;
 
   useEffect(() => {
