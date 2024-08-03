@@ -10,6 +10,14 @@ const Products = () => {
   const category = searchParams.get('category');
   let content = null;
 
+  const categoryTypes = [
+    { value: 'tea', title: 'Чай' },
+    { value: 'coffee', title: 'Кофе' },
+    { value: 'teapots', title: 'Чайники' },
+    { value: 'cezves', title: 'Турки' },
+    { value: 'other', title: 'Прочее' },
+  ];
+
   useEffect(() => {
     setCategory(category);
   }, [category, setCategory]);
@@ -21,7 +29,9 @@ const Products = () => {
   if (products.length) {
     content = (
       <>
-        <h2 className={style.goods__title}>Чай</h2>
+        <h2 className={style.goods__title}>
+          {categoryTypes.find((item) => item.value === category).title}
+        </h2>
 
         <ul className={style.goods__list}>
           {products.map((item) => (
