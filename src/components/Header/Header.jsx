@@ -1,8 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import style from './Header.module.css';
 import cn from 'classnames';
+import { useCart } from '../../context/CartContext';
 
 const Header = () => {
+  const { cart } = useCart();
   const location = useLocation();
 
   const getActiveClass = (category) => {
@@ -85,7 +87,7 @@ const Header = () => {
 
         <div className={style.header__iconWrapper}>
           <Link className={style.header__cartLink} to="/cart">
-            6
+            {cart ? cart.length : 0}
           </Link>
 
           <button className={style.header__burger}>
