@@ -10,6 +10,8 @@ const Products = () => {
   const category = searchParams.get('category');
   let content = null;
 
+  console.log(category);
+
   const categoryTypes = [
     { value: 'tea', title: 'Чай' },
     { value: 'coffee', title: 'Кофе' },
@@ -23,10 +25,12 @@ const Products = () => {
   }, [category, setCategory]);
 
   if (!products.length) {
+    console.log('1');
     content = <p>Идет загрузка товаров, подождите немного</p>;
   }
 
   if (products.length) {
+    console.log('2');
     content = (
       <>
         <h2 className={style.goods__title}>
@@ -36,7 +40,7 @@ const Products = () => {
         <ul className={style.goods__list}>
           {products.map((item) => (
             <li className={style.goods__item} key={item.id}>
-              <ProductItem {...item} />
+              <ProductItem data={item} />
             </li>
           ))}
         </ul>
