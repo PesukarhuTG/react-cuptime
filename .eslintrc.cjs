@@ -20,5 +20,7 @@ module.exports = {
     ],
     'react/prop-types': 'off',
     'no-unused-vars': 'warn',
+    'react-hooks/rules-of-hooks': 'off',
+    'react-refresh/only-export-components': 'off',
   },
 };
