@@ -61,6 +61,18 @@
   border: 0;
 }
 
+.header__menuLink {
+  transition: 0.3s;
+}
+
+.header__menuLink:hover {
+  color: #64099b;
+}
+
+.header__menuLink.active {
+  color: #64099b;
+}
+
 @media (max-width: 1240px) {
   .header {
     padding: 0 20px;

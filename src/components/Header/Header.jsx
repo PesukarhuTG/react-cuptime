@@ -1,8 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import style from './Header.module.css';
 import cn from 'classnames';
 
 const Header = () => {
+  const location = useLocation();
+
+  const getActiveClass = (category) => {
+    const currentCategory = new URLSearchParams(location.search).get(
+      'category'
+    );
+    return currentCategory === category ? 'active' : '';
+  };
+
   return (
     <header className={style.header}>
       <div className={cn(style.container, style.header__container)}>
@@ -18,7 +27,10 @@ const Header = () => {
           <ul className={style.header__menu}>
             <li className={style.header__menuItem}>
               <Link
-                className={style.header__menuLink}
+                className={cn(
+                  style.header__menuLink,
+                  style[getActiveClass('tea')]
+                )}
                 to="/products?category=tea"
               >
                 Чай
@@ -26,7 +38,10 @@ const Header = () => {
             </li>
             <li className={style.header__menuItem}>
               <Link
-                className={style.header__menuLink}
+                className={cn(
+                  style.header__menuLink,
+                  style[getActiveClass('coffee')]
+                )}
                 to="/products?category=coffee"
               >
                 Кофе
@@ -34,7 +49,10 @@ const Header = () => {
             </li>
             <li className={style.header__menuItem}>
               <Link
-                className={style.header__menuLink}
+                className={cn(
+                  style.header__menuLink,
+                  getActiveClass('teapots')
+                )}
                 to="/products?category=teapots"
               >
                 Чайники
@@ -42,7 +60,10 @@ const Header = () => {
             </li>
             <li className={style.header__menuItem}>
               <Link
-                className={style.header__menuLink}
+                className={cn(
+                  style.header__menuLink,
+                  style[getActiveClass('cezves')]
+                )}
                 to="/products?category=cezves"
               >
                 Турки
@@ -50,7 +71,10 @@ const Header = () => {
             </li>
             <li className={style.header__menuItem}>
               <Link
-                className={style.header__menuLink}
+                className={cn(
+                  style.header__menuLink,
+                  style[getActiveClass('other')]
+                )}
                 to="/products?category=other"
               >
                 Прочее
