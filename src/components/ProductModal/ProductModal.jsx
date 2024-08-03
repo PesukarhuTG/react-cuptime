@@ -3,6 +3,7 @@ import style from './ProductModal.module.css';
 import cn from 'classnames';
 import { API_URL } from '../../const';
 import { useState } from 'react';
+import { useCart } from '../../context/CartContext';
 
 const customStyles = {
   content: {
@@ -24,6 +25,7 @@ Modal.setAppElement('#root');
 
 export const ProductModal = ({ isOpen, onRequestClose, data }) => {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
   const handleDecrease = () => {
     if (quantity > 1) {
@@ -36,7 +38,8 @@ export const ProductModal = ({ isOpen, onRequestClose, data }) => {
   };
 
   const handleAddToCart = () => {
-    //todo: добавить в корзину
+    addToCart(data, quantity);
+    onRequestClose();
   };
 
   if (!data) {
