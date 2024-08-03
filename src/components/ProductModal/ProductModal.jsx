@@ -11,6 +11,11 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    display: 'flex',
+    maxWidth: '744px',
+    borderRadius: '6px',
+    border: 'none',
+    padding: 0,
   },
 };
 
@@ -29,43 +34,51 @@ export const ProductModal = ({ isOpen, onRequestClose, data }) => {
       style={customStyles}
       contentLabel="Product Modal"
     >
-      <img
-        className={style.good__image}
-        src={`${API_URL}${data.img}`}
-        alt={data.title}
-      />
-      <div className={style.good__content}>
-        <h2 className={style.good__title}>{data.title}</h2>
-        <p className={style.good__price}>{data.price}&nbsp;₽</p>
-        <ul>
+      <div className={style.modal__imageWrapper}>
+        <img
+          className={style.modal__image}
+          src={`${API_URL}${data.img}`}
+          alt={data.title}
+        />
+      </div>
+
+      <div className={style.modal__content}>
+        <h2 className={style.modal__title}>{data.title}</h2>
+        <p className={style.modal__price}>{data.price}&nbsp;₽</p>
+        <ul className={style.modal__additional}>
           {Object.entries(data.additional).map(([key, value]) => (
-            <li key={key}>
-              <span>{key}</span>: <span>{value}</span>
+            <li className={style.additionalItem} key={key}>
+              <span className={style.additionalItem__key}>{key}</span>{' '}
+              <span className={style.additionalItem__value}>{value}</span>
             </li>
           ))}
         </ul>
-        <button type="button" onClick={onRequestClose}>
+        <button
+          className={style.modal__closeBtn}
+          type="button"
+          onClick={onRequestClose}
+        >
           <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
-              x="5.71228"
-              y="14.1975"
+              x="3.71228"
+              y="12.1975"
               width="12"
               height="1.5"
-              transform="rotate(-45 5.71228 14.1975)"
+              transform="rotate(-45 3.71228 12.1975)"
               fill="#B8B8B8"
             />
             <rect
-              x="14.1976"
-              y="15.2582"
+              x="12.1976"
+              y="13.2582"
               width="12"
               height="1.5"
-              transform="rotate(-135 14.1976 15.2582)"
+              transform="rotate(-135 12.1976 13.2582)"
               fill="#B8B8B8"
             />
           </svg>

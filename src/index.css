@@ -89,3 +89,9 @@ a {
     padding: 0 42px;
   } */
 }
+
+@media (max-width: 660px) {
+  .ReactModal__Content {
+    flex-direction: column;
+  }
+}
