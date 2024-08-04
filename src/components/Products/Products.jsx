@@ -18,7 +18,7 @@ const Products = () => {
     <section className={style.goods}>
       <div className={style.container}>
         <h2 className={style.goods__title}>
-          {categoryTypes.find((item) => item.value === category).title}
+          {categoryTypes.find((item) => item.value === category).title || ''}
         </h2>
 
         <ul className={style.goods__list}>
