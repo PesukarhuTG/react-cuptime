@@ -5,22 +5,6 @@ import { API_URL } from '../../const';
 import { useState } from 'react';
 import { useCart } from '../../context/CartContext';
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    display: 'flex',
-    maxWidth: '744px',
-    borderRadius: '6px',
-    border: 'none',
-    padding: 0,
-  },
-};
-
 Modal.setAppElement('#root');
 
 export const ProductModal = ({ isOpen, onRequestClose, data }) => {
@@ -48,10 +32,11 @@ export const ProductModal = ({ isOpen, onRequestClose, data }) => {
 
   return (
     <Modal
+      className={style.modal}
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      style={customStyles}
       contentLabel="Product Modal"
+      overlayClassName={style.modal__overlay}
     >
       <div className={style.modal__imageWrapper}>
         <img

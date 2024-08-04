@@ -1,8 +1,32 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  max-width: 744px;
+  border-radius: 6px;
+  border: none;
+  padding: 0;
+  background-color: #fff;
+}
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+}
+
 .modal__imageWrapper {
   width: 336px;
 }
 
 .modal__image {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
   height: 100%;
   width: auto;
 }
@@ -152,6 +176,11 @@
 }
 
 @media (max-width: 660px) {
+  .modal {
+    flex-direction: column;
+    max-width: 280px;
+  }
+
   .modal__imageWrapper {
     width: 100%;
   }

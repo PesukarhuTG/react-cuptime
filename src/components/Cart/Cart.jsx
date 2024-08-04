@@ -91,6 +91,7 @@ const Cart = () => {
         overlayClassName={style.modalCart__overlay}
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
+        contentLabel="Cart Modal"
       >
         <h2 className={style.modalCart__title}>
           {orderStatus === 'success'
