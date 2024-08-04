@@ -87,7 +87,7 @@ const Header = () => {
 
         <div className={style.header__iconWrapper}>
           <Link className={style.header__cartLink} to="/cart">
-            {cart ? cart.length : 0}
+            {cart ? cart.reduce((acc, item) => item.quantity + acc, 0) : 0}
           </Link>
 
           <button className={style.header__burger}>

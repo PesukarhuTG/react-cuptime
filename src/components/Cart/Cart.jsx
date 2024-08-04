@@ -62,7 +62,8 @@ const Cart = () => {
     <section className={style.cart}>
       <div className={cn(style.container, style.cart__container)}>
         <h2 className={style.cart__title}>
-          Корзина ({cart ? cart.length : 0})
+          Корзина (
+          {cart ? cart.reduce((acc, item) => item.quantity + acc, 0) : 0})
         </h2>
 
         <ul className={style.cart__items}>
