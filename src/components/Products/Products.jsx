@@ -7,16 +7,8 @@ import { SkeletonLoader } from '../';
 
 const Products = () => {
   const [searchParams] = useSearchParams();
-  const { products, setCategory } = useProducts();
+  const { products, setCategory, categoryTypes } = useProducts();
   const category = searchParams.get('category');
-
-  const categoryTypes = [
-    { value: 'tea', title: 'Чай' },
-    { value: 'coffee', title: 'Кофе' },
-    { value: 'teapots', title: 'Чайники' },
-    { value: 'cezves', title: 'Турки' },
-    { value: 'other', title: 'Прочее' },
-  ];
 
   useEffect(() => {
     setCategory(category);
