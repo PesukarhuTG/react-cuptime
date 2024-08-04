@@ -2,9 +2,11 @@ import { Link, useLocation } from 'react-router-dom';
 import style from './Header.module.css';
 import cn from 'classnames';
 import { useCart } from '../../context/CartContext';
+import { useProducts } from '../../context/ProductContext';
 
 const Header = () => {
   const { cart } = useCart();
+  const { categoryTypes } = useProducts();
   const location = useLocation();
 
   const getActiveClass = (category) => {
@@ -27,61 +29,21 @@ const Header = () => {
 
         <nav className={style.header__nav}>
           <ul className={style.header__menu}>
-            <li className={style.header__menuItem}>
-              <Link
-                className={cn(
-                  style.header__menuLink,
-                  style[getActiveClass('tea')]
-                )}
-                to="/products?category=tea"
-              >
-                Чай
-              </Link>
-            </li>
-            <li className={style.header__menuItem}>
-              <Link
-                className={cn(
-                  style.header__menuLink,
-                  style[getActiveClass('coffee')]
-                )}
-                to="/products?category=coffee"
-              >
-                Кофе
-              </Link>
-            </li>
-            <li className={style.header__menuItem}>
-              <Link
-                className={cn(
-                  style.header__menuLink,
-                  getActiveClass('teapots')
-                )}
-                to="/products?category=teapots"
-              >
-                Чайники
-              </Link>
-            </li>
-            <li className={style.header__menuItem}>
-              <Link
-                className={cn(
-                  style.header__menuLink,
-                  style[getActiveClass('cezves')]
-                )}
-                to="/products?category=cezves"
-              >
-                Турки
-              </Link>
-            </li>
-            <li className={style.header__menuItem}>
-              <Link
-                className={cn(
-                  style.header__menuLink,
-                  style[getActiveClass('other')]
-                )}
-                to="/products?category=other"
-              >
-                Прочее
-              </Link>
-            </li>
+            {categoryTypes.length
+              ? categoryTypes.map((item) => (
+                  <li key={item.value} className={style.header__menuItem}>
+                    <Link
+                      className={cn(
+                        style.header__menuLink,
+                        style[getActiveClass(item.value)]
+                      )}
+                      to={`/products?category=${item.value}`}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))
+              : ''}
           </ul>
         </nav>
 
